@@ -2,5 +2,5 @@
 
 module.exports = {
 	collectCoverage: false,
-	testPathIgnorePatterns: ['/node_modules/']
-}
+	testPathIgnorePatterns: ['/node_modules/'],
+};
