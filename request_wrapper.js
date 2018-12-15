@@ -3,22 +3,22 @@
 const axios = require('axios');
 
 async function request(options) {
-	try {
-		const response = await axios.request(options);
-		return response.status;
-	} catch (error) {
-		if (error.response && error.response.status === 404) {
-			return request_wrapper.handle404(options, error);
-		}
-		throw error;
-	}
+	const response = await axios.request(options)
+		.catch(error => {
+			if (error.response && error.response.status === 404) {
+				return request_wrapper.handle404(options, error);
+			}
+			throw error;
+		});
+	if (response.error) 
+		return response;
+	return response.status;
 }
 
-// At the moment return for testing
 function handle404 (options, error) {
 	return {
 		error: 'Reponse 404',
-		message: `Error, handling 404 response of url ${options.url}`
+		message: `Error, handled 404 response of url ${options.url}`
 	};
 }
 

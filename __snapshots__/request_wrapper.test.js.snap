@@ -23,7 +23,7 @@ Array [
     "isThrow": false,
     "value": Object {
       "error": "Reponse 404",
-      "message": "Error, handling 404 response of url https://randomURL",
+      "message": "Error, handled 404 response of url https://randomURL",
     },
   },
 ]
