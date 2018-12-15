@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`request_wrapper on 404, verify we call handle404: handle404_calls 1`] = `
+Array [
+  Array [
+    Object {
+      "method": "get",
+      "url": "https://randomURL",
+    },
+    Object {
+      "response": Object {
+        "message": "invalid url",
+        "status": 404,
+      },
+    },
+  ],
+]
+`;
+
+exports[`request_wrapper on 404, verify we call handle404: handle404_results 1`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": Object {
+      "error": "Reponse 404",
+      "message": "Error, handling 404 response of url https://randomURL",
+    },
+  },
+]
+`;

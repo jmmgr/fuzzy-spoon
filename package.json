@@ -1,0 +1,15 @@
+{
+  "name": "example404",
+  "version": "1.0.0",
+  "description": "Example deal with 404",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jest": "^23.6.0"
+  }
+}
