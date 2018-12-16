@@ -28,3 +28,10 @@ Array [
   },
 ]
 `;
+
+exports[`request_wrapper on 404, verify we call handle404: response_404 1`] = `
+Object {
+  "error": "Reponse 404",
+  "message": "Error, handled 404 response of url https://randomURL",
+}
+`;

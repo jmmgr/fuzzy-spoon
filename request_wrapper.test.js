@@ -13,7 +13,7 @@ describe('request_wrapper', () => {
 		});
 
 		const spy_handle404 = jest.spyOn(request_wrapper, 'handle404');
-		await request_wrapper.request({
+		const response = await request_wrapper.request({
 			method: 'get',
 			url: 'https://randomURL',
 		});
@@ -21,5 +21,6 @@ describe('request_wrapper', () => {
 		expect(spy_handle404).toHaveBeenCalled();
 		expect(spy_handle404.mock.calls).toMatchSnapshot('handle404_calls');
 		expect(spy_handle404.mock.results).toMatchSnapshot('handle404_results');
+		expect(response).toMatchSnapshot('response_404');
 	});
 });
